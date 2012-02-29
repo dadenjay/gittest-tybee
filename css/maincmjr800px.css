@@ -1,0 +1,208 @@
+html,
+body  {
+    font-family: "Trebuchet MS", sans-serif;
+    background: #fff;
+    margin: 0;  /* shorthand for all margins = 0 */
+    padding: 0;
+	height: 100%;
+}
+
+p, h1, h2, h3, h4, h5, h6, li {
+    margin: 1ex 1em;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	
+}	
+
+a img {
+	border: none; 
+}
+
+#outerDiv {
+	width: 800px;
+	margin: 0 auto;
+	min-height: 100%;
+	position: relative;
+
+}
+
+#headerBox {
+	width: 800x;
+	height: 120px;
+	margin: 0 auto;
+	background-color: none;
+	position: relative;
+}
+
+div#logo {
+	margin: 10px 0;
+	/*position: relative;*/
+	width: 350px;
+	border-style: none;
+}
+
+div#viewCartBox {
+	display: block;
+	position: absolute;
+	height: 80px;
+	top: 5px;
+	right: 0;
+	text-align: center;
+	
+}
+
+#mainMenu {
+	position: relative;
+}
+
+#mainMenu ul {
+    width: 835px;
+	list-style: none;
+    margin: 0 0 0 25px;
+    padding: 0;
+}
+
+#mainMenu li {
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+#mainMenu ul li a {
+    font-family: "Trebuchet MS", sans-serif;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+	font-weight: bold;
+    padding: 0 15px 0 15px;
+    margin-right: 5px;
+    line-height: 25px;
+    background-color: #A90000;
+    border: none;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+#mainMenu a:hover {
+    color: #f8b449;
+}
+
+/*
+#mainMenu a.current {
+    background-color: gray;
+	/*margin-top: -5px;
+    height: 30px;
+    color: #aaa;*/
+    /*line-height: 25px;
+}
+
+#mainMenu a.current:hover {
+    cursor: default;
+}*/
+
+
+
+div#container {
+    width: 800px;       /* sets the content width */
+    margin: 0 auto;     /* no top/bottom margin, centered horizontally */
+    background: none;
+	padding-top: 15px;
+	padding-bottom: 25px;
+}
+
+div#data {
+	position: relative;
+	padding-bottom: 25px;
+
+}	
+
+div#leftdata {
+	position: absolute;
+	width: 390px;
+	background-color: #f0f0f0;
+	border-radius: 15px; 
+	-webkit-border-radius: 15px; 
+	-moz-border-radius: 15px;
+	margin-top: 20px;
+	padding-top: 10px;
+	padding-bottom: 25px;
+}
+
+div#rightdata {
+    width: 350px;
+	float: right;
+	padding: 15px 15px 0 15px;
+	
+}
+
+div#rightdata p{
+	background-color: yellow;
+}
+
+div#widthResponse p, div#depthResponse p{
+	height: 50%;
+	color: gray;
+}
+
+div.callout {
+	background-color: #8D000B;
+	padding: 15px;
+	margin: 50px;
+	border-radius: 15px; 
+	-webkit-border-radius: 15px; 
+	-moz-border-radius: 15px; 
+	text-decoration: none;
+	text-align: center;
+	
+}
+
+a {
+	text-decoration: none;
+}
+
+a#price {
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#footer {
+   clear: both;
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:25px;   /* Height of the footer */
+   background:transparent;
+   color: #bebebe;
+}   
+
+/*6july11 used for no JS enabled on cmjr calcform */
+#jsEnabled p{
+	background: red;
+}
+/* end 6july11 */
+
+
+/*
+
+div#header {
+    height: 110px;      // set size equal to banner image 
+    position: relative;
+}
+
+#outerDiv a:link, #outerDiv a:visited {
+    text-decoration: none;
+    color: #b36b00;
+}
+
+#outerDiv a:hover, #outerDiv a:active {
+    color: #566440;
+    border-bottom: 1px dashed #566440;
+}
+
+*/

@@ -1,0 +1,444 @@
+/* <WP Theme data>
+* Theme Name:    AdaptVint
+* Version:       1.0
+* Theme URI:     http://www.alanwho.com/web-development/wordpress/themes/adaptvint
+* Description:   A very simple 2 column XHTML theme for Wordpress 2.0.
+* Author:        Alan Who
+* Author URI:    http://www.alanwho.com
+*
+* License:       GNU General Public License
+*
+* 
+* Copyright (C) 2005  Alan Who
+*/
+
+
+
+/* quarantined these on 25nov08 ----------------------------------------
+a { text-decoration:none; font-weight: bold; color: #000000; }
+a:hover { text-decoration:underline; }
+p:first-line { font-weight: bold; padding-left: 100px; }
+ul li { list-style-type: none; }
+ul li input, ul li textarea { font-size: 1.5em; font-family:Arial, Helvetica, sans-serif; padding: .25em; }
+p { line-height: 1.5em; }
+form ul { margin: 1em auto 1em auto; }
+form li { clear:both; }
+form p { text-align:center; }
+input:focus { background-color: #333333; color: #ffffff; }
+textarea { margin: 2em 0em 2em 0em; width: 100%; }
+textarea:focus { background-color: #333333; color: #ffffff; }
+input[type=text], textarea { color: #777; font: 1em Verdana, Arial, Helvetica, Sans-Serif; padding: 3px; }
+input[type=text]:focus, textarea:focus { background: #fff; color: #333; border-color: #666; }
+small a { font-weight: bold; }
+small a:hover { text-decoration: underline; }
+small img { margin-right: .5em; }
+ol { list-style:decimal; }
+small a:link, small a:visited { font-weight: bold; color: #000000; text-decoration: none; }
+small a:hover { text-decoration: underline; }
+
+
+.clearing { clear:both; height: 0em; }
+.odd { background-color: #eee; }
+.even { background-color: #ccc; }
+.clear { height: 0em; clear:both }
+.border { height: 1em; }
+.noneright { border-right: none; }
+.headers li img { float: right; }
+.rssfloat { float: right; }
+.invisible { display: none; }
+.absright { position:absolute; right: 0em; }
+.absleft { position:absolute; left: 0em; }
+.right { float: right; }
+.left { float: left; }
+
+
+----------------------------------------------------------------- */
+
+/* special -- PADDING ON ALL ELEMENTS (EXCEPT IMAGES?)? */
+* { padding: 0em .5em 0em .5em; margin: 0em; } /* changed padding from 0em on 11-16-08 */
+/* p + p { margin-top: 1.3em; } tried the following to get spacing fixed on 11-28-08 This worked nicely in firefox but not IE */
+/* p { padding-bottom: 20px; }tried this to see if it would accommodate both browsers. This worked in firefox but not IE */                                                                                            
+p { margin-top: 1.5em; }
+p.first { margin-top: 1.3em; }/*Bingo. This and the line above fix the problem in both browsers.*/
+
+
+
+
+/* tag definitions */
+body { font-family: Georgia, "Times New Roman", Times, serif; font-size: 1em; }
+img { border: 0; padding: .5em 0em 0em 0em; } /* changed left border from 1em on 1-29-09 */
+h1 { text-align: center; font-size: 3em; font-weight: normal; }
+h1 span {	display: none; }
+h1 a, #about h2 a { color:#000000; font-weight: normal; font-family: Georgia, san-serif;}
+h1 em { font-style:normal; font-size: .5em;}
+h2 { font-size: 1.5em; font-family: Georgia, san-serif; font-weight: normal; margin: .25em; text-align:center; }
+h3 { font-size: 1em; font-family: Georgia, san-serif; background-color: #333333; color: #ffffff; }
+h4 { font-size: 1.5em; font-family: Georgia, san-serif; background-color: #333333; color: #ffffff; text-align:center;}
+h5 { font-size: 1.25em; font-family: Georgia, san-serif; background-color: #AD2C2C; color: black; text-align:center;}
+p { line-height: 1.5em; }
+h6 { font-size: 1.5em; font-weight: normal; margin: .25em; text-align:left; }
+
+
+/* links */
+a { text-decoration: underline; color: #000099; font-weight: bold; } 
+a:hover { color: #2554B3; }
+
+/* class - some were moved to quarantine on 25nov08 */
+.wp-caption-dd { color: gray; font-size: 0.8em; text-align: center; }
+.right { float: right; }
+.left { float: left; }
+
+/* added centering of entire page on 25nov08 -- didn't work 
+body {margin:0 auto;}
+*/
+
+/* borders */
+#bordertop, #borderbottom { width: 900px; background-color:#000000; height: .25em; }
+
+/* container */
+#container { margin-left: auto; margin-right: auto; text-align: auto; }
+
+/* top */
+#top { margin: 1em auto 1em auto; }
+#top h1 { font-size: 2em; text-align:center; }
+
+
+/* empty */
+#empty { height: 0em; }
+
+
+/* container */
+#container { margin: 0em auto; }
+
+/* copyright */
+#copyright { width: 75%; margin: 1em auto 1em auto; clear: both; }
+#copyright p { padding: .5em; }
+#copyright span img { float: right; }
+#copyright img{ margin: .25em; }
+
+#wrapperblog { background-color: #ffffff; margin: 1em; }
+* html #wrapperblog { margin: 0em; }
+
+
+/* removed from below after #ffffff: float: left; on 2-7-09*/
+#containerblog { width: 100%; background-color: #ffffff; float: left; margin-right: -10px; }
+
+#contentblog { margin-right: 10px; background-color: #ffffff; }
+
+/*original version
+#containerblog { width: 100%; background-color: #ffffff; float: left; margin-right: -250px; }
+
+#contentblog { margin-right: 250px; background-color: #ffffff; }
+*/
+
+#contentblog ol { padding: 1em; }
+
+#contentblog ol li { list-style:decimal;  }
+
+/*added on 25Nov08*/
+#contentblog li { list-style-type: disc; }
+
+
+.customcoupon
+{
+display: block;
+width: 808px;
+margin-top: 5px;
+font-family: Georgia, Times New Roman;
+font-size: 24px;
+text-align: center;
+background-color: orange;
+padding-top: 3px;
+padding-right: 1px;
+padding-bottom: 3px;
+padding-left: 1px;
+}
+
+
+
+.picbox 
+
+{
+display: block;
+float: left;
+width: 160px;
+margin-top: 10px;
+margin-right: 10px;
+margin-bottom: 10px;
+margin-left: 10px;
+font-family: Gerogia,Times New Roman,Trebuchet MS,Tahoma,Arial,Helvetica,sans-serif;
+font-size: 18px;
+font-weight: bold;
+background-color: transparent;
+background-image: none;
+background-repeat: repeat;
+background-attachment: scroll;
+background-x-position: 0%;
+background-y-position: 0%;
+color: white;
+
+/*removed border on 11-26-08
+
+border-top-width: 1px;
+border-right-width: 1px;
+border-bottom-width: 1px;
+border-left-width: 1px;
+border-top-style: solid;
+border-right-style: solid;
+border-bottom-style: solid;
+border-left-style: solid;
+border-top-color: #999999;
+border-right-color: #999999;
+border-bottom-color: #999999;
+border-left-color: #999999;*/
+
+
+padding-top: 3px;
+padding-right: 1px;
+padding-bottom: 3px;
+padding-left: 1px;
+}
+
+.picbox img {margin:0; padding:0}
+
+.texta {display:block; color:2554B3; text-decoration:underline; background:white; padding:5px; text-align:center; hover:746CC4}
+
+.text a {display:block; color:2554B3; text-decoration:underline; background:white; padding:5px; text-align:center}
+
+.text2 a {display:block; color:2554B3; text-decoration:underline; background:white; padding:5px; text-align:center}
+
+.text3 a {display:block; color:2554B3; text-decoration:underline; background:white; padding:5px; text-align:center}
+
+.text a:hover {display:block; padding:5px; text-align:center; color:746CC4; text-decoration:underline}
+
+.text2 a:hover {display:block; padding:5px; text-align:center; color:746CC4; text-decoration:underline}
+
+.text3 a:hover {display:block; padding:5px; text-align:center; color:746CC4; text-decoration:underline}
+
+
+/* end pic box */
+
+.menubox
+{
+display: block;
+position: absolute;
+left: 100px;
+}
+
+
+.couponbox
+{
+display: block;
+position: absolute;
+top: 2px;
+left: 750px;
+width: 160px;
+border-style: double;
+margin-top: 10px;
+margin-right: 10px;
+margin-bottom: 10px;
+margin-left: 10px;
+font-family: Gerogia,Times New Roman,Trebuchet MS,Tahoma,Arial,Helvetica,sans-serif;
+font-size: 13px;
+font-weight: bold;
+text-align: center;
+background-color: #A82A2A;
+background-image: none;
+background-repeat: repeat;
+background-attachment: scroll;
+background-x-position: 0%;
+background-y-position: 0%;
+color: black;
+
+padding-top: 3px;
+padding-right: 1px;
+padding-bottom: 3px;
+padding-left: 1px;
+}
+
+.noticebox
+{
+display: block;
+position: absolute;
+top: 258px;
+left: 700px;
+width: 160px;
+border-style: double;
+margin-top: 10px;
+margin-right: 10px;
+margin-bottom: 10px;
+margin-left: 10px;
+font-family: Gerogia,Times New Roman,Trebuchet MS,Tahoma,Arial,Helvetica,sans-serif;
+font-size: 13px;
+font-weight: bold;
+text-align: center;
+background-color: orange;
+background-image: none;
+background-repeat: repeat;
+background-attachment: scroll;
+background-x-position: 0%;
+background-y-position: 0%;
+color: black;
+
+padding-top: 3px;
+padding-right: 1px;
+padding-bottom: 3px;
+padding-left: 1px;
+}
+
+.viewcartbox
+{
+display: block;
+position: absolute;
+top: 5px;
+left: 750px;
+width: 160px;
+background-image: none;
+background-repeat: repeat;
+background-attachment: scroll;
+background-x-position: 0%;
+background-y-position: 0%;
+}
+
+.largeredbutton {
+display: block;   
+font-size : 18px;
+text-decoration: none;
+text-align: center;
+font-family : Arial,sans-serif;
+color : #FFFFFF;
+width : 230px;
+height : 40px;
+background-color : #990000;
+}
+
+.largeredbutton:hover {
+color:#F2B50F;
+}
+.largeredbutton:a {
+text-decoration: none;
+color: #FFFFFF;
+}
+
+.footerlinks
+a { text-decoration: none; color: #979797; font-weight: none; } 
+a:hover { color: #555555; }
+
+
+
+/*BEGIN QUARANTINE AREA ------------------------------------------------
+
+#googlebr { text-align: center; }
+
+#sidebarblog { width: 250px; float: right; color: #000000; }
+#sidebarblog ul { }
+#sidebarblog a { color: #000000; }
+#sidebarblog h2 { display:block; background-color: #ffffff; color: #000000; padding: .25em; font-weight: normal; font-size: 24px; }
+#sidebarblog ul li { list-style: none; }
+#sidebarblog ul ul { padding: .25em; }
+
+/*- apost */
+.apost {  height: 100%; padding: 1em; }
+.apost h1 { font-size:1.5em; text-align: left; }
+.apost h1 a:link, .apost h1 a:visited { text-decoration: none; display:block; background-color: #000000; color: #ffffff; padding: .25em; font-weight: normal; font-size: 24px; }
+.apost h1 a:hover { background-color: #ffffff; color: #000000; }
+
+.apost h2 { font-size:1.25em;  }
+.apost ol { padding: 1em; }
+* html .apost ol  { padding: 0em;  }
+.apost h1 a:hover {  }
+.apost h1 span { float: left; margin-right: .5em; }
+.apost h1 span img {  }
+.apost a {  }
+.apost a:hover { text-decoration:underline; }
+.apost h1 a {  }
+.apost h2 { font-weight: normal; }
+.apost p { line-height: 1.5em; padding: 1em; }
+.apost p img { float: none; }
+.apost small span img { border: none; margin-right: .5em; }
+.apost h1 a { color: #000099; }
+.apost img { border: .15em solid #000000; }
+.apost a { color:#000099; }
+
+/* .post */
+* html .post { height: 1%; }
+.post { margin: .5em; border: .25em solid #000066; background-color: #000099; color: #ffffff; }
+.post h2 { font-size: 1.5em; text-transform:uppercase; padding: .25em; }
+.post div { margin: 1em; background-color: #000099; padding: .25em; }
+.post div p { padding: .5em; }
+
+
+
+/* wp-calendar */
+#wp-calendar { width: 225px; margin: .5em auto .5em auto;  }
+#wp-calendar { color: #000000; }
+
+#wrapper { margin-top: .5em; }
+* html #wrapper { width: 99%; }
+#container { width: 900px; float: left; margin-right: -250px; }
+/* originally... #container { width: 100%; float: left; margin-right: -250px; } */
+#content { margin-right: 250px; }
+#content ol { padding: 1em; }
+#content ol li { list-style:decimal;  }
+#sidebar { width: 250px; float: right; color: #ffffff; }
+#sidebar ul { padding: 1em; }
+
+#sidebar a { color: #ffffff; }
+#sidebar ul li { list-style: none; }
+#sidebar ul ul { padding: .25em; }
+#sidebar a { color: #ffffff; }
+#sidebar ul ul { padding: .25em; }
+#sidebar ul { background-color:#000000;  }
+#sidebar ul li { list-style: none; }
+#sidebar h2 { display:block; background-color: #ffffff; color: #000000; padding: .25em; font-weight: normal; font-size: 24px; }
+#sidebarprimarylist { margin: .5em; border: .25em solid #990000; }
+
+#comments { margin: 1em; padding: 1em; }
+#comments h3 { display:block; background-color: #000000; color: #ffffff; padding: .25em; font-weight: normal; font-size: 24px; }
+#comments form p { text-align: left; }
+
+/* Begin Comments*/
+#commentform input { width: 170px; padding: 2px; margin: 5px 5px 1px 0;	}
+#commentform input:focus { background-color: #333333; color: #ffffff; }
+#commentform textarea { width: 100%; padding: 2px; }
+#commentform textarea:focus { background-color: #333333; color: #ffffff; }
+#commentform #submit { margin: 0; float: right; }
+#commentform p { margin: 5px 0; font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif; }
+
+.alt { margin: 0; padding: 10px; }
+.commentlist { padding: 0; text-align: justify;  }
+.commentlist a:link, .commentlist a:visited { text-decoration: none; color: #000000; font-weight: bold; }
+.commentlist a:hover { text-decoration: underline; }
+.commentlist li { margin: 15px 0 3px; padding: 5px 10px 3px; list-style: none; }
+.commentlist li span { float: right; }
+.alt { background-color: #000000; color: #ffffff; }
+.alt a:link, .alt a:visited, .alt cite a:link, .alt cite a:visited { color: #ffffff; }
+.commentlist p { margin: 10px 5px 10px 0; }
+.commentlist p { font-weight: normal; line-height: 1.5em; text-transform: none;	}
+
+.nocomments { text-align: center; margin: 0; padding: 0; }
+.commentmetadata { margin: 0; display: block; }
+.commentlist li, #commentform input, #commentform textarea { font: 0.9em 'Lucida Grande', Verdana, Arial, Sans-Serif; }
+.commentlist li { font-weight: bold; }
+.commentlist cite, .commentlist cite a { font-weight: bold; font-style: normal;	font-size: 1.1em; }
+
+.commentmetadata { font-weight: normal; }
+/* End Comments */
+
+
+/* postmetadata */
+.postmetadata {	clear: left; color: #777; padding-top: 5px; }
+
+/* small */
+.postmetadata small { font-family: Arial, Helvetica, Sans-Serif; font-size: 0.9em; line-height: 1.5em; color: #777; }
+
+/* alternative */
+.alternative { margin: 0; padding: 10px; background-color: #f8f8f8; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+
+/* FlickrRSS */
+.flickr { margin-left: 10px; }
+.flickr a:link img, .flickr a:visited img { border: 0.15em solid #000000; }
+.flickr a:hover img { border: 0.15em solid #000066;  }
+
+END QUARANTINE SECTION ------------------ */
+ 

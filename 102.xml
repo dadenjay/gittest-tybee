@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<data>
+	<templates>
+		<template t="102">
+			<name>Susanna</name>
+			<img></img>
+			<limits>
+				<insW>
+					<max></max>
+					<min></min>
+				</insW>
+				<insD>
+					<max></max>
+					<min></min>
+				</insD>
+			</limits>
+			<dims>
+				<dim name = "A"> <name>A</name> <res>insW-1</res> 			</dim>
+				<dim name = "B"> <name>B</name> <max>insD-1.5-3</max> 		</dim>
+				<dim name = "C"> <name>C</name> <res>insD-dimB-1.5</res>	</dim>
+			</dims>
+			<sections>
+				<section name = "B">
+					<name>B</name>
+					<withDivs>dimB</withDivs>
+					<acrossDivs>dimA</acrossDivs>
+				</section>
+				<section name = "C">
+					<name>C</name>
+					<withDivs>dimC</withDivs>
+					<acrossDivs>dimA</acrossDivs>
+				</section>
+			</sections>
+		</template>	
+	</templates>
+</data>
